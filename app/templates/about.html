@@ -1,0 +1,83 @@
+{% extends "base.html"%}
+
+{% block title %} About {% endblock%}
+
+{% block main %}
+
+<div class="left">
+
+   <h1>My story</h1>
+   After discovering my love and passion for coding quite late in life, I knew I needed to change careers. 
+   I am a predominantly self-taught programmer with a background in finance and investment. I'm self-motivated, 
+   ambitious and very dependable. I am comfortable working under pressure and hitting deadlines. My main goal at this point in 
+   time is to further my knowledge and create a long term career within the tech industry. 
+   <p></p>
+   <h1 class="sa">South Africa <img src="/static/img/sa.png" height="30px"></h1> 
+   I was born and raised in Johannesburg, South Africa. It was there where I went to both High School and University, 
+   ultimately graduating with a finance degree from the University of the Witwatersrand.
+   I played basketball at a very high level in university, winning national titles with the WITS team, as well as a short
+   stint playing professionally for the Egoli Magic. Near the end of my tenure at university, I transitioned to boxing,
+   becoming a competitive amateur and having numerous fights in both South Africa and the UK.
+
+   <p></p>
+   <h1 class="uk">UK <img src="/static/img/uk.png" height="30px"></h1>
+   In early 2021, in the midst of the COVID pandemic, I packed my bags and moved to London in search of opportunity and
+   adventure. I continued my boxing career, fighting in various locations in England. I ended up entering the financial
+   industry, working for a wealth management company. Very shorty after starting, I took an intro to python course purely 
+   because I thought it would look good on my CV. However, after one online tutorial I was hooked. At this point I 
+   realized that this is what I want to do with my life. I quit my job and began my journey of learning programming. 
+   Fast forward a few months and countless hours fully emersing myself in coding, and here we are.
+</div>
+
+<div class="right">
+   <div class="weatherWidget" ></div>
+   <p></p>
+   <div class="weatherWidget2"></div>
+</div>
+
+<!-- script for london weather widget -->
+<script>
+   window.weatherWidgetConfig =  window.weatherWidgetConfig || [];
+   window.weatherWidgetConfig.push({
+       selector:".weatherWidget",
+       apiKey: "PNMN4RGFXS69NLRKQFWD2TPS6", //Sign up for your personal key
+       location:"Johannesburg, South Africa", //Enter an address
+       unitGroup:"metric", //"us" or "metric"
+       forecastDays:1, //how many days forecast to show
+       title:"Johannesburg", //optional title to show in the 
+       showTitle:true, 
+       showConditions:true
+   });
+  
+   (function() {
+   var d = document, s = d.createElement('script');
+   s.src = 'https://www.visualcrossing.com/widgets/forecast-simple/weather-forecast-widget-simple.js';
+   s.setAttribute('data-timestamp', +new Date());
+   (d.head || d.body).appendChild(s);
+   })();
+</script>
+
+<!-- Script for SA weather widget -->
+<script>
+   window.weatherWidgetConfig =  window.weatherWidgetConfig || [];
+   window.weatherWidgetConfig.push({
+       selector:".weatherWidget2",
+       apiKey: "PNMN4RGFXS69NLRKQFWD2TPS6", //Sign up for your personal key
+       location:"london, UK", //Enter an address
+       unitGroup:"metric", //"us" or "metric"
+       forecastDays:1, //how many days forecast to show
+       title:"London", //optional title to show in the 
+       showTitle:true, 
+       showConditions:true
+   });
+  
+   (function() {
+   var d = document, s = d.createElement('script');
+   s.src = 'https://www.visualcrossing.com/widgets/forecast-simple/weather-forecast-widget-simple.js';
+   s.setAttribute('data-timestamp', +new Date());
+   (d.head || d.body).appendChild(s);
+   })();
+</script>
+
+
+{% endblock %}

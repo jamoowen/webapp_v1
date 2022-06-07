@@ -1,0 +1,86 @@
+body {
+    color: aliceblue;
+    background-image: url("/static/img/plain_purple.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.right {
+    padding-top: 20px;
+    position: absolute;
+    top: 100px;
+    right: 10px;
+    width: 400px;
+    height: 120px;
+    
+}
+
+.og {
+    color: white;
+    font-size: 32pt;
+    
+}
+
+.big {
+    color: antiquewhite;
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+.huge {
+    font-size: 40pt;
+    color: gold;
+}
+
+.green {
+    background-color: green;
+}
+
+.left {
+    padding-top: 20px;
+    position: absolute;
+    left: 130px;
+    top: 100px;
+    width: 600px;
+    height: 120px;
+}
+
+h2 {
+}
+.center {
+    margin: auto;
+    width: 50%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-radius: 25px;
+    padding: 10px;
+
+    }
+
+.background {
+    margin: auto;
+    width: 50%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: black;
+    opacity: 50%;
+    border-radius: 80px;
+    padding: 10px;
+    padding-bottom: 50px;
+}
+
+a:hover {
+    font-size: 30pt;
+    color: gold !important;
+}
+
+.sa:hover {
+    color: green;
+}
+
+.uk:hover {
+    color: rgb(9, 9, 115);
+}
+
+.hov:hover {
+    color: green;
+    font-size: 40pt;
+}

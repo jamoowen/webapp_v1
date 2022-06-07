@@ -1,0 +1,47 @@
+{% extends "base.html"%}
+
+{% block title %} Index {% endblock%}
+
+{% block main %}
+
+
+<div class="left">
+    <h2 id="welcome" onmouseover="changeclass('welcome')" onmouseleave="changeback('welcome')"></h2>
+    <p style="margin-bottom: 50px"></p>
+    <h2 id="look" onmouseover="changeclass('look')" onmouseleave="changeback('look')"></h2>
+</div>
+
+
+
+<div class="right">
+    <h2>My Stack</h2>
+    <p></p>
+    <img src="/static/img/css.png" height="50px">
+    <p></p>
+    <img src="/static/img/c.png" height="50px">
+    <p></p>
+    <img src="/static/img/py.png" height="50px">
+    <p></p>
+    <img src="/static/img/sql.png" height="50px">
+    <p></p>
+    <img src="/static/img/jinja.png" height="50px">
+    <p></p>
+    <img src="/static/img/flask.png" height="50px" onload="setTimeout(t1, 500); setTimeout(t2, 1500)">
+    <p></p>
+</div>
+
+<script>
+    function t1() { document.getElementById("welcome").innerHTML = "Welcome" }
+    function t2() { document.getElementById("look").innerHTML = "Please look around. If you would like to contact me, fill out the form in the contact page or reach out via social media" }
+    function t3() { element.classList.add('animate__animated', 'animate__bounceOutLeft') }
+
+    function changeclass(x) {
+        document.getElementById(x).className = "huge";
+    }
+    function changeback(x) {
+        document.getElementById(x).className = "og"
+    }
+
+</script>
+
+{% endblock %}
